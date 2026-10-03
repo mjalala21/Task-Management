@@ -1,0 +1,77 @@
+@StudentApi_HostAddress = https://localhost:7064
+
+### Get All Students
+GET {{StudentApi_HostAddress}}/api/students/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc5MDY3MDk5NCwiaXNzIjoiU3R1ZGVudEFwaSIsImF1ZCI6IlN0dWRlbnRBcGlVc2VycyJ9.8CQZLORWSdKoWUCAVwqq-fuZy_kAwYoP7AZrV0pykXA
+Accept: application/json
+
+###
+
+### Get one Student
+
+GET {{StudentApi_HostAddress}}/api/students/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc5MDY3MDk5NCwiaXNzIjoiU3R1ZGVudEFwaSIsImF1ZCI6IlN0dWRlbnRBcGlVc2VycyJ9.8CQZLORWSdKoWUCAVwqq-fuZy_kAwYoP7AZrV0pykXA
+Accept: application/json
+
+### Add a Student
+POST {{StudentApi_HostAddress}}/api/students/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc5MDY3MDk5NCwiaXNzIjoiU3R1ZGVudEFwaSIsImF1ZCI6IlN0dWRlbnRBcGlVc2VycyJ9.8CQZLORWSdKoWUCAVwqq-fuZy_kAwYoP7AZrV0pykXA
+Accept: application/json
+
+{
+  "name" : "Amna",
+  "age" : 18,
+  "address" : "jdfkjkfjfkjkjfkjdkjfdfdfdfjdjdjjfdjfdjfjdf",
+  "phoneno" : "9848384384"
+}
+###
+
+### Update Student 
+PUT {{StudentApi_HostAddress}}/api/students/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc5MDY3MDk5NCwiaXNzIjoiU3R1ZGVudEFwaSIsImF1ZCI6IlN0dWRlbnRBcGlVc2VycyJ9.8CQZLORWSdKoWUCAVwqq-fuZy_kAwYoP7AZrV0pykXA
+Accept: application/json
+
+{
+  "name" : "Amna sharin",
+  "age" : 21,
+    "address" : "jdfkjkfjfkjkjfkjffeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "phoneno" : "9848384384"
+}
+
+###
+
+### Delete a Student 
+DELETE {{StudentApi_HostAddress}}/api/students/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc5MDY3MDk5NCwiaXNzIjoiU3R1ZGVudEFwaSIsImF1ZCI6IlN0dWRlbnRBcGlVc2VycyJ9.8CQZLORWSdKoWUCAVwqq-fuZy_kAwYoP7AZrV0pykXA
+Accept: application/json
+###
+
+
+
+### Register
+POST {{StudentApi_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "12345",
+  "role": "Admin"
+}
+
+###
+
+### Login
+POST {{StudentApi_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "12345"
+}
+
+### Get All Tasks
+
+GET {{StudentApi_HostAddress}}/api/task/
+Accept: application/json
